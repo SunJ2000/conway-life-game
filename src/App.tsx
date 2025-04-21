@@ -1,5 +1,7 @@
+import Main from "./Page/main";
+
 function App() {
-  return <div>Click on the Vite and React logos to learn more</div>;
+  return <Main />;
 }
 
 export default App;

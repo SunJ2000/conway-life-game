@@ -1,0 +1,7 @@
+.functionPanel {
+  background-color: #23b8af;
+  height: 700px;
+  width: 350px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
