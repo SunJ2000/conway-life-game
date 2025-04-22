@@ -1,7 +1,34 @@
+:root {
+  --grid-size: 15px;
+  --grid-columns: 40;
+}
 .lifeBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #23b8af;
   height: 700px;
   width: 700px;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.zone {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-columns),
+    var(--grid-size)
+  ); /* 60 columns of 10px each */
+  grid-template-rows: repeat(var(--grid-columns), var(--grid-size));
+  height: 600px;
+  width: 600px;
+}
+
+.grid {
+  height: calc(var(--grid-size)-2);
+  width: calc(var(--grid-size)-2);
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.liveGrid {
+  background-color: white !important;
 }

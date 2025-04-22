@@ -2,13 +2,15 @@ import "./style.css";
 
 interface GridProps {
   status: boolean;
+  clickHandler?: () => void;
 }
 const Grid = (props: GridProps) => {
-  const { status, ...rest } = props;
+  const { status, clickHandler } = props;
   return (
-    <div className="grid" {...rest}>
-      {status ? "ON" : "OFF"}
-    </div>
+    <div
+      className={`grid ${status ? "liveGrid" : undefined}`}
+      onClick={clickHandler}
+    />
   );
 };
 
