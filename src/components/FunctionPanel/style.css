@@ -1,6 +1,11 @@
 .functionPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
   background-color: #23b8af;
-  height: 700px;
+  height: 660px;
   width: 350px;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
