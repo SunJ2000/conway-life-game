@@ -7,7 +7,7 @@ const Main = () => {
   const [gridStatus, setGridStatus] = useState<boolean[]>([]);
   const [isRunning, setIsRunning] = useState(false);
   const size = useRef<number>(0);
-
+  
   useEffect(() => {
     const zoneElement = document.querySelector(".Main");
     if (zoneElement) {

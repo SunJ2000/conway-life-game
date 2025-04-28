@@ -28,7 +28,7 @@ const FunctionPanel = (props: FunctionPanelProps) => {
       >
         下一周期
       </Button>
-      <Button onClick={() => StartPauseHandler()}>{isRunning ? "暂 停" : "开 始"}</Button>
+      <Button onClick={() => StartPauseHandler()}>{isRunning ? "暂  停" : "开  始"}</Button>
     </div>
   );
 };
