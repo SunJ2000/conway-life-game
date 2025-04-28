@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   disabled?: boolean;
 }
 const Button = (
-  props: ButtonProps | React.ButtonHTMLAttributes<HTMLElement>
+  props: ButtonProps
 ) => {
   const { children, ...rest } = props;
   return (

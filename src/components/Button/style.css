@@ -8,7 +8,10 @@
   color: #19867d;
 }
 
-
+.Button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+}
 
 .Button:hover {
   background-color: #fff;
