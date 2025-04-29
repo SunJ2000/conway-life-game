@@ -12,10 +12,11 @@
   color: #a0a0a0;
 }
 
-.Select:hover {
-  background-color: #fff;
-}
 .Select-option {
   background-color: #b8faff;
   color: #19867d;
+}
+
+.Select-option:hover {
+  background-color: #fff;
 }
