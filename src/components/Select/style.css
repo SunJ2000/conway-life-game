@@ -1,0 +1,21 @@
+.Select {
+  height: 50px;
+  width: 240px;
+  border: none;
+  border-radius: 40px;
+  font-size: 24px;
+  background-color: #b8faff;
+  color: #19867d;
+}
+.Select:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+}
+
+.Select:hover {
+  background-color: #fff;
+}
+.Select-option {
+  background-color: #b8faff;
+  color: #19867d;
+}

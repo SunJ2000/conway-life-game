@@ -1,15 +1,14 @@
 import "./style.css";
 
-interface GridProps {
+interface GridProps extends React.HTMLAttributes<HTMLDivElement> {
   status: boolean;
-  clickHandler?: () => void;
 }
 const Grid = (props: GridProps) => {
-  const { status, clickHandler } = props;
+  const { status, ...rest } = props;
   return (
     <div
       className={`grid ${status ? "liveGrid" : undefined}`}
-      onClick={clickHandler}
+      {...rest}
     />
   );
 };

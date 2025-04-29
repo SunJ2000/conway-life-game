@@ -1,24 +1,42 @@
 import Button from "../Button";
+import Select from "../Select";
 import "./style.css";
 
 interface FunctionPanelProps {
-  StartPauseHandler: () => void;
+  StartPauseHandler: (status?: boolean) => void;
   NextPrime: () => void;
   isRunning: boolean;
   InitValue: (mode: string) => void;
+  setGridStatus: React.Dispatch<React.SetStateAction<boolean[]>>;
 }
 
 const FunctionPanel = (props: FunctionPanelProps) => {
-  const { StartPauseHandler, NextPrime, isRunning, InitValue } = props;
+  const { StartPauseHandler, NextPrime, isRunning, InitValue, setGridStatus } = props;
+
+  const options = [
+    { value: "random", label: "随机分布" },
+    { value: "custom", label: "自定义" },
+    { value: "beacon", label: "预定义-灯塔" },
+  ];
 
   return (
     <div className="functionPanel">
+
+      <Select
+        onChange={(e) => {
+          InitValue(e.target.value);
+        }}
+        options={options}
+        disabled={isRunning}
+      />
       <Button
         onClick={() => {
-          InitValue("random");
+          StartPauseHandler(false);
+          setGridStatus((prevStatus) => prevStatus.map(() => false));
         }}
+        disabled={isRunning}
       >
-        随机分布
+        重 置
       </Button>
       <Button
         onClick={() => {
