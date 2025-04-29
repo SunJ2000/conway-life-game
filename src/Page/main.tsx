@@ -110,7 +110,7 @@ const Main = () => {
     if (isRunning) {
       timerId = setTimeout(() => {
         NextPrime();
-      }, 1000);
+      }, 500);
       return () => {
         clearTimeout(timerId);
       };

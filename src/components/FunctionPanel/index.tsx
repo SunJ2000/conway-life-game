@@ -26,6 +26,7 @@ const FunctionPanel = (props: FunctionPanelProps) => {
         onChange={(e) => {
           InitValue(e.target.value);
         }}
+        title="初始化模式"
         options={options}
         disabled={isRunning}
       />

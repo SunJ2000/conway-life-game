@@ -16,7 +16,7 @@ const Select = (
     return (
         <select className="Select" {...rest} >
             {options.map((option: IOption, index: number) => (
-                <option key={index} value={option.value} className="Select-option">
+                <option key={index} value={option.value} className="Option" >
                     {option.label}
                 </option>
             ))}

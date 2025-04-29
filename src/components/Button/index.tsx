@@ -10,7 +10,7 @@ const Button = (
 ) => {
   const { children, ...rest } = props;
   return (
-    <button className="Button" {...rest}>
+    <button className="Button" type="button" {...rest}>
       {children}
     </button>
   );
